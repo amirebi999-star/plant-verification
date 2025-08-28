@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>استعلام گواهی</title>
+</head>
+<body>
+  <h2>فرم استعلام گواهی</h2>
+  <p id="date"></p>
+  <p id="place"></p>
+  <p id="serial"></p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const date = urlParams.get('date');
+    const place = urlParams.get('place');
+    const serial = urlParams.get('serial');
+
+    document.getElementById('date').textContent = `تاریخ: ${date}`;
+    document.getElementById('place').textContent = `محل صدور: ${place}`;
+    document.getElementById('serial').textContent = `شماره سریال: ${serial}`;
+  </script>
+</body>
+</html>
 
